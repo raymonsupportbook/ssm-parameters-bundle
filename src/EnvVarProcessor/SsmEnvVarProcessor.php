@@ -20,7 +20,7 @@ class SsmEnvVarProcessor implements EnvVarProcessorInterface
     {
         return $this->ssmClient->getParameter(
             [
-                'name' => $getEnv($name),
+                'Name' => $name,
             ]
         )->getParameter()?->getValue();
     }

@@ -1,4 +1,6 @@
 services:
+  AsyncAws\Ssm\SsmClient:
+
   Triasto\SsmParametersBundle\EnvVarProcessor\SsmEnvVarProcessor:
     autowire: true
     tags: [ 'container.env_var_processor' ]
