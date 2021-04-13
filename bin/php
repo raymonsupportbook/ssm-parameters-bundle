@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker exec -it triasto_ssm_paramaters_bundle_php php -d memory_limit=-1 $*
+docker-compose run php php $*

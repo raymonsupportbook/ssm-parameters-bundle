@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker exec -it triasto_ssm_paramaters_bundle_php composer $*
+docker-compose run php composer $*

@@ -1,12 +1,11 @@
 version: '3'
 services:
   php:
-    image: eu.gcr.io/struo-solutions/php:8.0-dev
-    container_name: triasto_ssm_paramaters_bundle_php
+    image: prooph/composer:8.0
     volumes:
-      - '.:/var/www/html:rw'
-      - '~/.composer:/home/php/.composer'
-      - 'fpm_sock:/sock'
+      - '.:/app:rw'
+      - '~/.composer:/root/.composer'
+    entrypoint: ''
     environment:
       SYMFONY_REQUIRE: '5.*'
     networks:
@@ -16,7 +15,3 @@ networks:
   development:
     external: true
     name: 'development'
-
-volumes:
-  fpm_sock:
-    driver: local
