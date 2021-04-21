@@ -21,13 +21,17 @@ class SsmEnvVarProcessor implements EnvVarProcessorInterface
     }
 
     public function getEnv(string $prefix, string $name, \Closure $getEnv): ?string
-    { 
+    {
         $name = $getEnv($name);
 
         return $this->cache->get(
             sprintf(
                 'triasto-ssm-param-%s',
-                $name
+                str_replace(
+                    '/',
+                    '.',
+                    $name
+                )
             ),
             function (ItemInterface $cacheItem) use ($name) {
                 return $this->ssmClient->getParameter(
