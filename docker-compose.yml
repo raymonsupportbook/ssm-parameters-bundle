@@ -4,14 +4,6 @@ services:
     image: prooph/composer:8.0
     volumes:
       - '.:/app:rw'
-      - '~/.composer:/root/.composer'
     entrypoint: ''
     environment:
       SYMFONY_REQUIRE: '5.*'
-    networks:
-      development: null
-
-networks:
-  development:
-    external: true
-    name: 'development'

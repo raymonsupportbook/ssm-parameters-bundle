@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Triasto\SsmParametersBundle\EnvVarProcessor;
 
 use AsyncAws\Ssm\Enum\ParameterType;
-use AsyncAws\Ssm\Input\GetParameterRequest;
 use AsyncAws\Ssm\SsmClient;
 use JetBrains\PhpStorm\ArrayShape;
 use Symfony\Component\DependencyInjection\EnvVarProcessorInterface;
