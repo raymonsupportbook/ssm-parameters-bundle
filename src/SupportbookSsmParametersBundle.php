@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Sb\SsmParametersBundle;
+namespace Supportbook\SsmParametersBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SbSsmParametersBundle extends Bundle
+class SupportbookSsmParametersBundle extends Bundle
 {
     public function getPath(): string
     {
