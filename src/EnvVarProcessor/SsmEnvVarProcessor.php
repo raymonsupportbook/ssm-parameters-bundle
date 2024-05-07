@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Triasto\SsmParametersBundle\EnvVarProcessor;
+namespace Sb\SsmParametersBundle\EnvVarProcessor;
 
 use AsyncAws\Ssm\Enum\ParameterType;
 use AsyncAws\Ssm\SsmClient;
@@ -25,7 +25,7 @@ class SsmEnvVarProcessor implements EnvVarProcessorInterface
 
         return $this->cache->get(
             sprintf(
-                'triasto-ssm-param-%s',
+                'sb-ssm-param-%s',
                 str_replace(
                     '/',
                     '.',

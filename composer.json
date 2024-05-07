@@ -1,25 +1,25 @@
 {
-    "name": "triasto/ssm-parameters-bundle",
+    "name": "sb/ssm-parameters-bundle",
     "description": "Small bundle for using SSM parameters in a Symfony project",
     "type": "symfony-bundle",
     "require": {
         "php": "^8.0",
         "async-aws/ssm": "^1.2",
-        "symfony/config": "^5.0 || ^6.0",
-        "symfony/cache": "^5.0 || ^6.0",
-        "symfony/dependency-injection": "^5.0 || ^6.0",
-        "symfony/http-kernel": "^5.0 || ^6.0"
+        "symfony/config": "^6.0 || ^7.0",
+        "symfony/cache": "^6.0 || ^7.0",
+        "symfony/dependency-injection": "^6.0 || ^7.0",
+        "symfony/http-kernel": "^6.0 || ^7.0"
     },
     "autoload": {
         "psr-4": {
-            "Triasto\\SsmParametersBundle\\": "src/"
+            "Sb\\SsmParametersBundle\\": "src/"
         }
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "Lucas Pekel",
-            "email": "lucas.pekel@gmail.com"
+            "name": "Supportbook",
+            "email": "development@supportbook.nl"
         }
     ]
 }

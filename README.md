@@ -15,7 +15,7 @@ Applications that use Symfony Flex
 Open a command console, enter your project directory and execute:
 
 ```console
-$ composer require triasto/ssm-parameters-bundle
+$ composer require sb/ssm-parameters-bundle
 ```
 
 Applications that don't use Symfony Flex
@@ -27,7 +27,7 @@ Open a command console, enter your project directory and execute the following c
 version of this bundle:
 
 ```console
-$ composer require triasto/ssm-parameters-bundle
+$ composer require sb/ssm-parameters-bundle
 ```
 
 ### Step 2: Enable the Bundle
@@ -39,6 +39,6 @@ Then, enable the bundle by adding it to the list of registered bundles in the `c
 
 return [
     // ...
-    Triasto\SsmParametersBundle\TriastoSsmParametersBundle::class => ['all' => true],
+    Sb\SsmParametersBundle\SbSsmParametersBundle::class => ['all' => true],
 ];
 ```

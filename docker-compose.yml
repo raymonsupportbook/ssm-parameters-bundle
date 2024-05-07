@@ -6,4 +6,4 @@ services:
       - '.:/app:rw'
     entrypoint: ''
     environment:
-      SYMFONY_REQUIRE: '5.*'
+      SYMFONY_REQUIRE: '7.*'
