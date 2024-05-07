@@ -1,6 +1,6 @@
 services:
   AsyncAws\Ssm\SsmClient:
 
-  Sb\SsmParametersBundle\EnvVarProcessor\SsmEnvVarProcessor:
+  Supportbook\SsmParametersBundle\EnvVarProcessor\SsmEnvVarProcessor:
     autowire: true
     tags: [ 'container.env_var_processor' ]

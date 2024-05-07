@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Sb\SsmParametersBundle\EnvVarProcessor;
+namespace Supportbook\SsmParametersBundle\EnvVarProcessor;
 
 use AsyncAws\Ssm\Enum\ParameterType;
 use AsyncAws\Ssm\SsmClient;

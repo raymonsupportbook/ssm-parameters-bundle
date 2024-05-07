@@ -1,5 +1,5 @@
 {
-    "name": "sb/ssm-parameters-bundle",
+    "name": "supportbook/ssm-parameters-bundle",
     "description": "Small bundle for using SSM parameters in a Symfony project",
     "type": "symfony-bundle",
     "require": {
@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Sb\\SsmParametersBundle\\": "src/"
+            "Supportbook\\SsmParametersBundle\\": "src/"
         }
     },
     "license": "MIT",
