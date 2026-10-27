@@ -15,7 +15,8 @@ class SsmEnvVarProcessor implements EnvVarProcessorInterface
 {
     public function __construct(
         private SsmClient $ssmClient,
-        private CacheInterface $cache
+        private CacheInterface $cache,
+        private int $cacheLifetime = 600
     ) {
     }
 
@@ -33,6 +34,8 @@ class SsmEnvVarProcessor implements EnvVarProcessorInterface
                 )
             ),
             function (ItemInterface $cacheItem) use ($name) {
+                $cacheItem->expiresAfter($this->cacheLifetime);
+
                 return $this->ssmClient->getParameter(
                     [
                         'Name' => $name,

@@ -3,4 +3,6 @@ services:
 
   Supportbook\SsmParametersBundle\EnvVarProcessor\SsmEnvVarProcessor:
     autowire: true
+    arguments:
+      $cacheLifetime: '%supportbook_ssm_parameters.cache_lifetime%'
     tags: [ 'container.env_var_processor' ]
