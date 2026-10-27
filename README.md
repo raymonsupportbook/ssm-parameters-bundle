@@ -42,3 +42,27 @@ return [
     Supportbook\SsmParametersBundle\SupportbookSsmParametersBundle::class => ['all' => true],
 ];
 ```
+
+Usage
+=====
+
+Reference an environment variable that holds the name of an SSM parameter with the `ssm:` prefix:
+
+```yaml
+# config/packages/lexik_jwt_authentication.yaml
+lexik_jwt_authentication:
+    public_key: '%env(ssm:JWT_PUBLIC_KEY)%'   # JWT_PUBLIC_KEY=/sb/api-gateway/test/jwt/key/public
+```
+
+The value is fetched (with decryption) and stored in the `cache.app` pool.
+
+Configuration
+=============
+
+```yaml
+# config/packages/supportbook_ssm_parameters.yaml
+supportbook_ssm_parameters:
+    # Seconds a parameter is cached (default 600). A rotated value in SSM is picked up after this time,
+    # also when `cache.app` is shared between deploys (e.g. a database adapter).
+    cache_lifetime: 600
+```
